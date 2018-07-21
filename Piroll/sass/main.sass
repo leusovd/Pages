@@ -1,0 +1,340 @@
+@import "reset"
+@import "fonts"
+@import "colors"
+@import "variables"
+@import "mixins"
+@import "menu-icons"
+
+html
+	font-size: 10px
+body
+	font-size: 16px
+	font-family: $regular
+	line-height: 24px
+section
+	padding: 10rem 0
+header
+	position: relative
+	height: 100vh
+	width: 100%
+	padding-top: 4.5rem
+	background: url(../img/header-bg.jpg) no-repeat 50% 60%/cover
+a
+	&:link, &:visited, &:hover, &:active
+		text-decoration: none
+		color: inherit
+h1, h2, h3, h4, h5
+	color: $header
+	font-weight: bold
+h1
+	font-size: 38px
+h2
+	font-size: 30px
+	margin-bottom: 4rem
+h3
+	text-transform: uppercase
+h4
+	font-size: 18px
+	font-weight: bold
+	color: $white
+p
+	color: $text
+.nav-btn
+	padding: 1.5rem 4.5rem
+	border-radius: 2px
+	color: $white
+	background: $main
+	text-transform: uppercase
+	font-size: 12px
+	font-weight: bold
+	letter-spacing: 0.7px
+	border: 1px solid darken($main, 5%)
+	text-shadow: 0 -1px 0 darken($main, 10%)
+	box-shadow: inset 0 1px 0 lighten($main, 20%)
+	&:hover
+		background: lighten($main, 3%)
+
+// SECTION: HEADER
+
+.top-nav_menu
+	display: flex
+	justify-content: space-between
+	a
+		margin: 0 15px
+		text-transform: uppercase
+		font-size: 14px
+		font-weight: bold
+		color: $header
+		&:hover
+			color: $main
+.main-info
+	position: absolute
+	bottom: 20%
+	p
+		margin: 3rem 0 4rem
+		font-size: 18px
+		line-height: 28px
+.navbar
+	padding: 0
+	&-brand
+		margin: 0 10px
+	&-icon
+		display: block
+		padding: 3px
+		margin: 3px
+		border: 2px solid $header
+		border-radius: 3px
+		font-size: 20px
+		
+
+// SECTION: ABOUT
+
+.about
+	text-align: center
+	img
+		padding: 3rem 0 2rem
+
+//SECTION: SKILLS
+
+.skills
+	padding: 0
+	background: $bg
+	.right-side
+		background: url(../img/image11.jpg) no-repeat center center/cover
+	&_widget
+		padding: 10rem 10rem 10rem 6rem
+		.widget_block
+			position: relative
+			padding: 2.25rem 0
+			margin-bottom: 2.3rem
+			h3
+				display: inline-block
+			p
+				display: inline-block
+				margin-left: 10px
+				font-size: 18px
+				color: $header
+				font-weight: bold
+			.grade
+				height: 5px
+				width: 100%
+				position: absolute
+				left: 0
+				bottom: 0
+				background: #d8d8d8
+			.fill
+				height: 5px
+				position: absolute
+				left: 0
+				bottom: 0
+				background: $main
+	.widget_block:nth-child(2)
+		.fill
+			width: 75%
+	.widget_block:nth-child(3)
+		.fill
+			width: 90%
+	.widget_block:nth-child(4)
+		.fill
+			width: 65%
+
+//SECTION: RESULTS
+
+.results
+	background: $main
+	&_box
+		&_item
+			display: flex
+			img
+				width: 4rem
+				height: 4rem
+				margin-right: 2.8rem
+			p
+				color: $white
+				font-size: 18px
+				text-transform: uppercase
+				span
+					font-size: 12px
+
+//SECTION: PORTFOLIO
+
+.portfolio
+	padding: 0
+	&_block
+		display: none
+		height: 20rem
+		position: relative
+		&:hover
+			& > span
+				visibility: visible
+				opacity: 1
+		img
+			width: 100%
+			height: 100%
+		span
+			display: block
+			height: 100%
+			width: 100%
+			position: absolute
+			background: rgba(0, 0, 0, 0.5)
+			cursor: pointer
+			transition: 0.25s ease-out
+			visibility: hidden
+			opacity: 0
+			img
+				height: 30px
+				width: 48px
+				position: absolute
+				top: calc(50% - 15px)
+				left: calc(50% - 24px)
+	#loadMore
+		padding: 4rem 0
+		width: 100%
+		background: #f5f5f5
+		border: none
+		box-shadow: none
+		text-shadow: none
+		text-align: center
+		color: $text
+		text-transform: uppercase
+		font-size: 12px
+		letter-spacing: 0.7px
+		font-weight: bold
+
+//SECTION: VIDEO-CONTENT
+
+.video-content
+	.heading
+		text-align: center
+	&_block
+		margin-top: 6rem
+		iframe
+			width: 100%
+			height: 57rem
+
+// SECTION: WIDGETS
+
+.widgets
+	padding: 8rem 0
+	background: $bg
+	&_block
+		padding: 2rem
+		text-align: center
+		h3
+			font-size: 14px
+		img
+			margin-bottom: 3rem
+		p
+			margin-top: 2rem
+
+// SECTION: QUOTATION
+
+.quotation
+	padding: 10rem 0 3rem
+	background: $main
+	&_block_item
+		text-align: center
+		p
+			font-size: 26px
+			line-height: 36px
+			color: $white
+			opacity: 0.9
+			&:last-child
+				margin: 3.8rem 0 10rem
+				font-size: 12px
+				font-weight: bold
+				text-transform: uppercase
+				letter-spacing: 1px
+//slick
+.slick-dots
+	li
+		margin: 0 -3px
+.slick-dots
+	li
+		button
+			&:before
+				font-size: 6px
+				color: $white
+				opacity: 0.8
+.slick-dots
+	li.slick-active
+		button
+			&:before
+				color: $white
+				font-size: 9px
+				opacity: 1
+
+// SECTION: BRANDS
+.brands
+	padding: 6.4rem 0
+
+// SECTION: CONTACT
+
+.contact
+	background: $bg
+	&_heading
+	text-align: center
+	&_form
+		margin-top: 4rem
+		form
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+			input
+				margin-bottom: 2rem
+				height: 5rem
+				width: 49%
+				padding: 1.5rem
+				border: none
+				&:nth-child(3)
+					width: 100%
+			textarea
+				resize: none
+				height: 17rem
+				width: 100%
+				padding: 2rem
+				margin-bottom: 2rem
+				border: none
+			button
+				margin: 0 auto
+
+// SECTION: FOOTER
+
+.footer
+	padding: 10rem
+	background: $header
+	p
+		font-size: 15px
+		color: $white
+		opacity: 0.5
+	nav
+		display: flex
+		flex-direction: column
+		a
+			font-size: 15px
+			color: $white
+			opacity: 0.5
+			&:hover
+				opacity: 0.7
+
+//ICON-UP
+.scrollup
+	display: block
+	position: fixed
+	padding: 10px 15px
+	border-radius: 2px
+	background: $text
+	bottom: 50px
+	left: 50px
+	cursor: pointer
+	transition: 0.5s ease-out
+	opacity: 0.5
+	font-size: 18px
+	font-weight: bold
+	&:hover
+		opacity: 0.3
+a:not([href]):not([tabindex])
+	color: $white
+
+
+@import "media"

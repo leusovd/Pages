@@ -1,0 +1,115 @@
+@media (max-width: 992px)
+	.container
+		max-width: 98%
+@media (max-width: 768px)
+	html
+		font-size: 8px
+	header
+		padding: 0
+		.container
+			max-width: 100%
+			margin: 0
+			padding: 0
+	h1
+		font-size: 30px
+	.scrollup
+		left: 10px
+		bottom: 10px
+	//SECTION: HEADER
+	.top-nav
+		position: fixed
+		z-index: 999
+		width: 100%
+	.top-nav_menu
+		flex-direction: column
+		align-items: center
+		a
+			width: 100%			
+			border-top: 1px solid darken(#bac4bb, 10%)
+			text-align: center
+			line-height: 32px
+	.main-info
+		text-align: center
+		z-index: 0
+		padding: 15px
+		p
+			font-size: 15px
+			line-height: 28px
+	.navbar
+		background: #bac4bb
+		border-bottom: 1px solid darken(#bac4bb, 10%)
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+
+	//SECTION: SKILLS
+	.skills
+		.container-fluid
+			padding: 0
+		&_widget
+			padding: 5rem
+		.right-side
+			height: 400px
+
+	//SECTION:RESULTS
+	.results
+		padding: 20px 0
+		&_box_item
+			padding: 5px
+			align-items: center
+			justify-content: center
+
+	//SECTION: PORTFOLIO
+	.portfolio
+		&_block
+			height: 30rem
+
+	//SECTION: VIDEO-CONTENT
+	.video-content
+		&_block
+			iframe
+				height: 45rem
+
+	// SECTION: BRANDS
+	.brands
+		padding: 30px 0
+		&_block
+			padding: 7px
+
+	// SECTION: FOOTER
+	.footer
+		padding: 30px 0
+		text-align: center
+		&_block
+			padding: 5px
+
+@media (max-width: 480px)
+	section
+		padding: 30px 0
+	//SECTION: SKILLS
+	.skills
+		.right-side
+			height: 300px
+
+	//SECTION:RESULTS
+	.results
+		padding: 20px 0
+		&_box_item
+			justify-content: flex-start
+
+	//SECTION: PORTFOLIO
+	.portfolio
+		&_block
+			height: 35rem
+			
+	//SECTION: VIDEO-CONTENT
+	.video-content
+		&_block
+			iframe
+				height: 25rem
+	
+	//SECTION: WIDGETS
+	.widgets
+		padding: 20px 0 40px
+		&_block
+			padding-top: 30px
+			border-bottom: 1px solid lighten($text, 40%)
+
