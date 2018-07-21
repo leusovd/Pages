@@ -1,0 +1,440 @@
+@import "reset"
+@import "variables"
+@import "mixins"
+@import "colors"
+@import "fontello"
+
+html
+	font-size: 10px
+
+body
+	font-family: $roboto-slab
+	color: $text
+section
+	padding: 10rem 0
+a
+	&:hover, &:link, &:visited, &:active
+		text-decoration: none
+		color: inherit
+h1,h2,h3
+	font-family: $montserrat
+	text-transform: uppercase
+	font-weight: 500
+h1	
+	font-size: 4.8rem
+h2
+	font-size: 20px
+	line-height: 24px
+	&::after
+		content: ''
+		display: block
+		height: 2px
+		width: 50px
+		margin: 29px auto
+		background: $text
+h3
+	font-size: 14px
+	line-height: 24px
+	margin: 2.9rem 0 2rem
+h4
+	font-size: 18px
+	line-height: 24px
+p
+	font-size: 14px
+	font-weight: 400
+	line-height: 24px
+.heading
+	margin-bottom: 7rem
+	text-align: center
+	p
+		font-size: 16px
+button
+	@extend %reset-button
+	padding: 10px 33px
+	border: 2px solid $white
+	border-radius: 2px
+	font-family: $montserrat
+	font-size: 16px
+	font-weight: 500
+	line-height: 24px
+	text-transform: uppercase
+	color: inherit
+	transition: 0.25s ease-out
+	&:hover
+		background: rgba(255, 255, 255, 0.3)
+.nav_btn
+	display: none
+	padding: 5px
+	cursor: pointer
+	font-size: 25px
+	border: 2px solid $white
+	border-radius: 5px
+
+// SECTION-TITLE
+.title-section
+	height: 100vh
+	width: 100%
+	padding-top: 4rem
+	background: url(../img/title-section-bg.jpg) center/cover no-repeat
+	color: $white
+	.top-nav
+		&_logo
+			font-family: $montserrat
+			font-size: 2.4rem
+			font-weight: 700
+			line-height: 3.6rem
+		&-menu
+			display: flex
+			justify-content: space-between
+			a
+				display: block
+				font-family: $montserrat
+				font-size: 1.4rem
+				line-height: 2.4rem
+				letter-spacing: 0.35px
+				&:after
+					content: ''
+					display: block
+					height: 1px
+					width: 0
+					margin: 0 auto
+					background-color: $white
+					transition: 0.5s ease-out
+				&:hover
+					&:after
+						width: 100%						
+	.welcome-text
+		margin-top: 15%
+		text-align: center
+		p
+			margin: 2rem 0 4rem
+			font-size: 20px
+			font-weight: 300
+			line-height: 24px
+			text-transform: capitalize
+
+// SECTION-SERVICES
+
+.services	
+	text-align: center
+	&_widgets_item
+		img
+			width: 90px
+			height: 90px
+
+// SECTION-ABOUT
+
+.about
+	background: $bg
+	&_description
+		margin-bottom: 7rem
+	&_team_card
+		padding: 0 5px
+		&_image
+			position: relative			
+			&:hover > span
+				visibility: visible
+				opacity: 1
+			img
+				width: 100%
+				height: auto
+			span
+				@extend %overlay
+				background: rgba(55, 55, 55, 0.5)
+				color: $white				
+				div
+					display: flex
+					position: absolute
+					justify-content: space-between
+					right: calc(50% - 55px)
+					bottom: 38px
+					a
+						i
+							display: block
+							font-size: 20px
+							&:hover
+								background: $main
+		p
+			margin-top: 20px
+			font-size: 13px
+			text-align: center
+			span
+				text-transform: uppercase
+				font-weight: 500
+.arrow-next, .arrow-prev
+	display: block
+	position: absolute
+	top: 35%
+	z-index: 999
+	font-size: 25px
+	color: #ddd
+	background: $text
+	cursor: pointer
+	transition: 0.25s ease-out
+	&:hover
+		background: $main
+.arrow-next	
+	right: 3px
+.arrow-prev
+	left: 5px
+
+// SECTION: WORKS
+
+.mixitup-control-active
+	color: $main
+.works
+	&_nav-sort
+		justify-content: center
+		button.works-button
+			display: inline-block
+			padding: 0
+			margin: 0 12px
+			font-family: $roboto-slab
+			font-size: 16px
+			line-height: 24px
+			text-transform: capitalize
+	&_portfolio_card
+		position: relative
+		margin-bottom: 30px
+		&:hover
+			span
+				visibility: visible
+				opacity: 1
+		img
+			width: 100%
+			height: auto
+		span
+			@extend %overlay
+			background: rgba(192, 48, 28, 0.7)
+			color: $white
+			transition: 0.25s ease-out
+			div
+				text-align: center
+				margin: 0 auto
+				padding-top: 90px
+				p
+					font-size: 12px
+					margin-bottom: 1rem
+				.btn-open
+					display: inline-block
+					padding: 12px 17px 12px 20px
+					font-size: 14px
+					line-height: 24px
+					letter-spacing: 1.4px
+					text-transform: uppercase
+					border: 1px solid #fff
+					transition: 0.25s ease-out
+					&:hover
+						color: $main
+						background: #fff
+						
+// SECTION-YOUR-PROJECT
+
+.your-project
+	padding: 50px
+	background: url(../img/your-project-section-bg.jpg) no-repeat top center/cover
+	text-align: center
+	color: $white
+	p
+		margin-bottom: 4.5rem
+		font-size: 30px
+		font-weight: 400
+		line-height: 44px
+		span
+			text-transform: uppercase
+
+// SECTION-RECENT-BLOG-POSTS
+.blog_recent
+	img
+		width: 100%
+		height: auto
+	&_post
+		margin: 20px 0
+.post_description
+	.more		
+		font-size: 13px
+		font-weight: 700
+		text-transform: uppercase
+		letter-spacing: 1.3px
+	& > p
+		margin: 2rem 0 3.4rem
+		font-size: 14px
+		text-align: justify
+	a
+		&:hover
+			color: $main
+	&_heading
+		.date
+			display: inline-block
+			padding: 15px 17px 10px
+			border: 2px solid $text
+			font-family: $montserrat
+			font-size: 14px
+			font-weight: 700
+			line-height: 20px
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 1.4px
+			span
+				font-size: 24px
+				letter-spacing: 2.4px
+	.pd-header
+		display: inline-block
+		margin-left: 2.8rem
+		& > a
+			text-transform: uppercase
+			h4
+				font-family: $montserrat
+				font-size: 16px
+				font-weight: 500
+		p
+			font-size: 13px
+			color: #777
+			font-style: italic
+
+// SECTION-BRANDS
+
+.brands
+	background: $bg
+	&_block
+		text-align: center
+		padding-bottom: 4rem
+		.brands-images
+			display: flex
+			justify-content: space-between
+			align-items: center
+		.quotation
+			margin: 0 6.7rem
+			p:first-child
+				margin: 6rem 0 4rem
+				font-size: 18px
+				font-style: italic
+				line-height: 30px
+			p:last-child
+				font-size: 20px
+				font-weight: 500
+//slider-navigation-dots-styles
+.slick-dots li
+	margin: 0
+.slick-dots li button:before
+	font-size: 15px
+	color: #ddd
+.slick-dots li.slick-active button:before
+	color: $main
+//
+
+//SECTION-CONTACT
+
+.contact_block_info_widget
+	margin-bottom: 37px
+	&:last-child
+		margin-bottom: 0
+	p:first-child
+		font-family: $montserrat
+		font-size: 14px
+		font-weight: 600
+		line-height: 30px
+		text-transform: uppercase
+	p:last-child
+		margin-left: 27px
+		font-size: 12px
+		line-height: 20px
+	i
+		font-size: 18px
+.contact
+	form
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		justify-content: space-between
+		input
+			width: 49%
+			padding: 17px
+			margin-bottom: 20px
+			border: .5px solid $text
+			font-family: $roboto-slab
+			font-size: 14px
+			line-height: 20px
+			&::placeholder
+				font-size: 12px			
+				text-transform: uppercase
+			&:focus
+				outline-color: $main
+		textarea
+			width: 100%
+			height: 10rem
+			padding: 17px
+			margin-bottom: 20px
+			border: .5px solid $text
+			font-family: $roboto-slab
+			font-size: 14px
+			line-height: 20px
+			resize: none
+			&::placeholder
+				font-size: 12px
+				text-transform: uppercase
+			&:focus
+				outline-color: $main
+		button
+			padding: 17px
+			border: .5px solid $text
+			font-size: 12px
+			line-height: 20px
+			text-transform: uppercase
+			&:focus
+				border: .5px solid $main
+				color: $main
+		p
+			span
+				color: $main
+
+//SECTION-FOOTER
+
+.footer
+	padding: 100px 0
+	text-align: center
+	background: $main
+	color: $white
+	p
+		margin-top: 2.9rem
+		font-size: 12px
+		line-height: 20px
+		text-transform: uppercase
+		&::before
+			content: ''
+			display: block
+			height: 2px
+			width: 50px
+			margin: 0 auto 29px
+			background: $white
+	.socials
+		display: flex
+		width: 50%
+		margin: 0 auto
+		justify-content: space-between
+		a
+			display: block
+			border: 1px solid $white
+			border-radius: 50%
+			i
+				font-size: 20px
+
+//ICON-UP
+.scrollup
+	display: block
+	position: fixed
+	padding: 5px 10px 10px
+	border-radius: 2px
+	background: $text
+	bottom: 50px
+	left: 50px
+	cursor: pointer
+	transition: 0.5s ease-out
+	opacity: 0.5
+	&:hover
+		background: $main
+	i
+		color: $white
+		font-size: 25px
+	
+@import "media"

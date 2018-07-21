@@ -1,0 +1,138 @@
+@media (max-width: 480px)
+	button
+		font-size: 12px
+	.title-section
+		div.welcome-text
+			margin-top: 35%
+	.top-nav
+			&-menu
+				display: none
+				position: absolute
+				left: 0
+				flex-direction: column
+				justify-content: space-between
+				width: 100%
+				text-align: center
+				text-transform: uppercase
+				a
+					display: block !important
+					padding: 5px 0
+					border-bottom: 1px solid $white
+					&::after
+						display: none
+					&:last-child
+						border: none
+	.post_description
+		.pd-header
+			display: block
+			margin-left: 0
+			margin-top: 10px
+	.contact
+		form
+			input
+				width: 100%
+	.your-project
+		p
+			font-size: 20px
+
+@media (max-width: 769px)
+	section
+		padding: 50px 0
+	button
+		&:hover
+			background: inherit
+	h1
+		font-size: 3rem
+	.scrollup
+		left: 25px
+		bottom: 25px
+	.heading
+		margin-bottom: 5rem
+	.nav_btn
+		display: block
+	.title-section
+		padding: 0
+		background: url(../img/title-section-bg.jpg) 23%/cover no-repeat
+		.container
+			max-width: 100%
+			margin: 0
+			padding: 0
+		.top-nav
+			padding: 10px
+			position: relative
+			background: #702218
+			border-bottom: 1px solid #fff
+			.nav_btn
+				position: absolute
+				right: 10px
+				top: -38px
+			&-menu
+				display: none
+				position: absolute
+				width: 100%
+				top: 12px
+				left: 0
+				z-index: 999
+				text-align: center
+				text-transform: uppercase
+				background: #702218
+				// border-top: 1px solid #fff
+				border-bottom: 1px solid #fff
+				a
+					display: inline
+					padding: 5px
+					&::after
+						display: none
+		.welcome-text
+			margin-top: 25%
+			p
+				font-size: 15px
+				margin: 2rem 0 3rem
+	//SECTION-SERVICES
+	.services_widgets_item
+		margin-bottom: 3rem
+	//SECTION-ABOUT
+	.about
+		&_description
+			p
+				margin-bottom: 2rem
+	.arrow-next, .arrow-prev
+		top: 35%
+	//SECTION-WORKS
+	.works
+		&_nav-sort
+			display: flex
+			justify-content: center
+			flex-wrap: wrap
+		&_portfolio_card
+			&:hover
+				span
+					display: none
+	// SECTION-YOUR-PROJECT
+	.your-project
+		background: url(../img/your-project-section-bg.jpg) no-repeat top center
+	// SECTION-RECENT-BLOG-POSTS
+	.blog_recent
+	img
+		width: 100%
+		height: auto
+		margin-bottom: 20px
+	// SECTION-BRANDS
+	.brands
+		.brands-images
+			flex-wrap: wrap
+			justify-content: center
+			a
+				margin: 0 5px
+	//SECTION-CONTACT
+	.contact_block_info
+		display: flex
+		margin-bottom: 37px
+		&:last-child
+			margin-bottom: 37px
+		flex-wrap: wrap
+		justify-content: space-between
+	.contact
+		form
+			p
+				margin-top: 10px
