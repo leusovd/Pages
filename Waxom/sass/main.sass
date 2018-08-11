@@ -1,0 +1,668 @@
+@import "reset"
+@import "fonts"
+@import "colors"
+@import "variables"
+@import "fontello"
+
+html
+	font-size: 10px
+h1
+	font-family: $Raleway
+	font-size: 5.2rem
+	font-weight: 800
+h3
+	font-family: $Raleway
+	font-size: 2.2rem
+	font-weight: 600
+	color: $headers	
+a
+	&:link, &:visited, &:active, &:hover
+		text-decoration: none
+		color: inherit
+
+//GENERAL-CLASSES
+.section-header
+	&__title
+		h2
+			font-family: $Raleway
+			font-size: 3rem
+			font-weight: 600
+			color: $headers
+			text-align: center
+			padding-bottom: 1.5rem
+	&__description
+		p
+			font-family: $Montserrat
+			font-size: 1.6rem
+			font-weight: 500
+			color: $par
+			text-align: center
+			padding-bottom: 4rem
+.btn--main
+	padding: 1.1rem 3.2rem
+	border: none
+	border-radius: 0.3rem
+	font-family: $Raleway
+	font-size: 1.4rem
+	font-weight: 800
+	text-transform: uppercase
+	color: $white
+	background: $button
+	cursor: pointer
+	box-shadow: 0 0.3rem 0 darken($button, 10%)
+	&:hover
+		background: darken($button, 3%)
+	&:active
+		background: lighten($button, 5%)
+.main-logo
+	a
+		display: flex
+		align-items: center
+		h2
+			font-family: $Raleway
+			font-size: 3.4rem
+			font-weight: 400
+			color: $white
+a.more-btn
+	display: inline-block
+	font-family: $Montserrat
+	font-size: 1.4rem
+	color: $main1
+	i
+		display: inline-block
+		transform: translateY(.5px)
+// MAIN-PAGE
+.main
+	background: url(../img/section1/main.jpg) top center/ cover no-repeat
+	&__overlay
+		width: 100%
+		height: 100vh
+		padding-top: 4rem
+		background: transparentize(#111, 0.5)
+.hdr
+	position: relative
+	z-index: 10
+	&__nav
+		display: flex
+		align-items: center
+		color: $white
+		a:hover
+			color: $main1
+		&--categories
+			font-family: $Montserrat
+			font-size: 1.4rem
+			a
+				padding-right: 2rem
+		&--search
+			font-size: 1.5rem
+			color: $white
+			a
+				padding-left: 2rem
+	&__nav-menu
+		display: none
+		position: absolute
+		top: 2rem
+		z-index: 999
+		button
+			background: transparent
+			border: none
+			cursor: pointer
+			span
+				display: block				
+				height: 2px
+				width: 25px
+				margin: 5px 0	
+				background: $white
+				border-radius: 1px
+	&__adaptive-search
+		display: none
+		position: absolute
+		top: 2rem
+		right: 0
+		z-index: 999
+		a
+			display: block
+		i
+			color: $white
+			font-size: 2.5rem	
+
+.get-started
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 0
+	width: 100%
+	height: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	color: $white
+	overflow: hidden
+	&__alignment
+		text-align: center
+		width: 90%
+	p:first-of-type
+		font-family: $Raleway
+		font-size: 3.4rem
+		font-weight: 500
+	p:last-of-type
+		font-family: $Montserrat
+		font-size: 1.6rem
+		font-weight: 300
+	button
+		margin: 5.5rem 0 0
+
+// SECTION-WIDGETS
+.widgets
+	padding: 9rem 0 5rem
+.widget-block
+	text-align: center
+	padding-bottom: 3rem
+	&::after
+		content: ''
+		display: block
+		height: 3px
+		width: 7rem
+		margin: 3rem auto 0
+		background: #f1eee9
+	&__icon
+		padding-bottom: 3rem
+	.icon
+		margin: 0 auto
+		width: 5rem
+		height: 5rem
+	.icon1
+		background: url(../img/section2/icon1.png) left top / cover no-repeat
+	.icon2
+		width: 5.3rem
+		background: url(../img/section2/icon2.png) left top / cover no-repeat
+	.icon3
+		background: url(../img/section2/icon3.png) left top / cover no-repeat
+	.icon4
+		width: 7.2rem
+		background: url(../img/section2/icon4.png) left top / cover no-repeat
+	&__title
+		padding-bottom: 2.5rem
+	&__description
+		font-family: $Montserrat
+		font-size: 1.4rem
+		font-weight: 400
+		color: #8c8c8c
+	&:hover
+		.icon1
+			background: url(../img/section2/icon1-colored.png) left top / cover no-repeat
+		.icon2
+			width: 5.3rem
+			background: url(../img/section2/icon2-colored.png) left top / cover no-repeat
+		.icon3
+			background: url(../img/section2/icon3-colored.png) left top / cover no-repeat
+		.icon4
+			width: 7.2rem
+			background: url(../img/section2/icon4-colored.png) left top / cover no-repeat
+		.widget-block__title
+			h3
+				color: $main1
+		&::after
+			background: $main1
+
+// SECTION-PROMO
+.promo
+	padding: 9rem 0 0
+	background: $secondary-bg
+
+.purchase
+	padding: 5rem 0
+	background: linear-gradient(to right, #211b19, #4e3427)
+	&__content
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__info
+		padding-left: 3rem
+		p:first-child
+			font-family: $Raleway
+			font-size: 2.8rem
+			font-weight: 400
+			color: $white
+			span
+				color: $main1
+		p:last-child
+			font-family: $Montserrat
+			font-size: 1.8rem
+			font-weight: 300
+			color: #615855
+	&__cta
+		padding-right: 3rem
+		text-align: center
+
+.examples
+	position: relative
+	width: 100%
+	height: 48.2rem
+	text-align: center
+	img
+		max-width: 100%
+		height: auto
+	&__center
+		position: absolute
+		bottom: 0
+		left: calc(50% - 77rem/2)
+		z-index: 2
+	&__right
+		position: absolute
+		right: 0
+		bottom: 0
+		z-index: 1
+	&__left
+		position: absolute
+		left: 0
+		bottom: 0
+		z-index: 0
+
+// SECTION-LATEST-PROJECTS
+.latest-projects
+	padding: 8.5rem 0 8rem
+.portfolio
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	align-items: center
+	&__btns-container
+		display: flex
+		flex-flow: row wrap
+		justify-content: center
+	&__loadmore-button
+		margin: 4rem auto 0
+		text-align: center
+a.sort-btn
+	display: block
+	padding: .8rem 1.8rem
+	margin: .5rem
+	border: 1px solid #ebebeb
+	border-radius: 3px
+	font-family: $Montserrat
+	font-size: 1.4rem
+	font-weight: 500
+	color: $par
+	&:hover
+		color: $white
+		background: #998675
+		border-color: #998675
+a.active
+	color: $white
+	background: #998675
+	border-color: #998675
+.portfolio__grid
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	&__block
+		display: none
+		width: 33.33%
+		padding: 10px
+		.content
+			padding: 8px
+			background: #fbfaf8
+			&:hover .content__overlay
+				display: flex
+			&:hover
+				background: #362f2d
+				p
+					color: $white
+				h4
+					color: $main1
+			&__img
+				position: relative
+			&__descr
+				padding: 1rem 0 0 1.5rem
+				p
+					font-family: $Raleway
+					font-size: 2rem
+					font-weight: 400
+					color: $main1
+				h4
+					font-family: $Montserrat
+					font-size: 1.4rem
+					color: #d1d1d1
+			&__overlay
+				position: absolute
+				top: 0
+				left: 0
+				display: none
+				justify-content: center
+				align-items: center
+				width: 100%
+				height: 100%		
+				background: transparentize(#000, 0.5)
+				cursor: pointer
+				&__icons
+					font-size: 2rem
+					color: $white
+					i:hover
+						color: $main1
+.show
+	display: block
+.additional
+	display: none
+
+//SECTION-VIDEO
+.video
+	video
+		display: block
+	&__content
+		position: relative
+		width: 100%
+		height: 100vh
+		overflow: hidden
+		margin: auto
+	&__overlay
+		position: absolute
+		display: flex
+		width: 100%
+		height: 100%
+		justify-content: center
+		top: 0
+		left: 0
+		background: transparentize(#000, 0.5)
+		&__content
+			display: flex
+			width: 50%
+			flex-direction: column
+			justify-content: center
+			text-align: center
+			h3
+				padding-top: 4rem
+				font-family: $Raleway
+				font-size: 3rem
+				color: $white
+			p:first-of-type
+				padding-top: 3rem
+				font-family: $Montserrat
+				font-size: 1.6rem
+				color: $white
+			p:last-of-type
+				padding-top: 4rem
+				font-family: $Montserrat
+				font-size: 1.4rem
+				font-weight: 500
+				color: $main1
+#play
+	padding: 1.5rem
+	background: transparentize(#000, 0.7)
+	border: none
+	border-radius: 50%
+	cursor: pointer
+.hide-content
+	visibility: hidden
+
+//SECTION-ADVANTAGES
+.advantages
+	&__background
+		display: flex
+		justify-content: flex-end
+		background: url(../img/section6/iphone.jpg) left bottom no-repeat
+	&__content
+		width: 60%
+		padding: 19rem 0 15rem
+		&__title
+			font-family: $Raleway
+			font-size: 3rem
+			font-weight: 600
+			color: $headers
+		&__descr
+			padding: 3.8rem 0
+			font-family: $Montserrat
+			font-size: 1.6rem
+			font-weight: 500
+			color: $par
+		&__list
+			padding-left: 4.5rem
+		&__list>li
+			display: flex
+			align-items: center
+			font-family: $Montserrat
+			font-size: 1.4rem
+			font-weight: 500
+			line-height: 3.2rem
+			color: $par
+			i
+				margin-right: 2.9rem
+				font-size: 2.1rem
+				color: $main1
+	&__widgets
+		background: linear-gradient(to right, #211b19, #4e3427)
+		&__container
+			display: flex
+			padding: 6.8rem	0	6rem
+		&__block
+			width: 20%			
+			&__content
+				text-align: center
+				&::after
+					content: ''
+					display: block
+					margin: auto
+					width: 3rem
+					height: 0.2rem
+					background: $white
+				p:first-of-type
+					// padding: 2.8rem 0 1.8rem
+					font-family: $Montserrat
+					font-size: 4.8rem
+					font-weight: 300
+					color: $white
+				p:last-of-type
+					padding-bottom: 2rem
+					font-family: $Montserrat
+					font-size: 1.4rem
+					font-weight: 500
+					text-transform: uppercase
+					color: $main1
+					
+//SECTION-BLOG
+.blog
+	padding: 8.2rem 0
+	&__carousel
+		position: relative
+		width: 100%
+		overflow: hidden
+		&__container
+			display: flex
+			width: 100%
+			justify-content: flex-start
+			transition: 0.3s ease-out
+		&__block
+			flex: 0 0 33.33%
+			padding: 1.5rem
+		&__content
+			position: relative
+			border: 1px solid #f8f8f8
+			&:hover .blog__carousel__date
+				.day
+					background: $main1
+				.month
+					background: darken($main1, 10%)
+			&:hover .blog__carousel__descr
+				background: #362f2d
+				h4
+					color: $main1
+				p
+					color: $white
+			&:hover .blog__carousel__overlay
+				display: block
+		&__date
+			position: absolute
+			top: 5%
+			left: 5%
+			z-index: 2
+			width: 5rem
+			height: 6rem
+			color: $white
+			text-align: center
+			.day
+				background: #363636
+				font-family: $Montserrat
+				font-size: 2.4rem
+				border-top-left-radius: 3px
+				border-top-right-radius: 3px
+			.month
+				padding: 0.5rem
+				background: #252525
+				font-family: $Raleway
+				font-size: 1.2rem
+				border-bottom-left-radius: 3px
+				border-bottom-right-radius: 3px
+		&__descr
+			padding: 2rem
+			h4
+				margin: 0
+				font-family: $Raleway
+				font-size: 2rem
+				font-weight: 500
+				color: $headers
+			p
+				padding: 1.5rem 0 2rem
+				font-family: $Montserrat
+				font-size: 1.4rem
+				font-weight: 400
+				color: $headers
+		&__img
+			position: relative
+		&__overlay
+			display: none
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 1
+			width: 100%
+			height: 100%
+			background: transparentize(#000, 0.5)
+		&__arrows
+			display: flex
+			justify-content: center
+			color: #000
+		&__prev, &__next
+			margin: 0.5rem
+			border: 1px solid transparentize($headers, 0.5)
+			border-radius: 50%
+			font-size: 1.5rem
+			color: transparentize($headers, 0.5)
+			cursor: pointer
+			&:hover
+				border: 1px solid $main1
+				color: $main1
+		&__prev
+			i
+				display: block
+				transform: translateX(-1px) translateY(-1px)
+		&__next
+			i
+				display: block
+				transform: translateX(1px) translateY(-1px)
+
+//SECTION-LOGOS
+.logos
+	background: url(../img/section8/section-bg.jpg) center left/cover no-repeat
+	&__overlay
+		background: transparentize(#000, 0.5)
+	&__container
+		display: flex
+		padding: 10rem 0
+	&__block
+		display: flex
+		padding: 4rem
+		flex-basis: 25%
+		justify-content: center
+		align-items: center
+
+//SECTION-PRE-FOOTER
+.pre-footer
+	padding: 5rem 0 8rem
+	background: #191919
+	&__content
+		display: flex
+	&__block
+		flex-basis: 25%
+		padding: 1.5rem
+		&__title
+			display: flex
+			align-items: flex-end
+			height: 20%
+			padding-bottom: 0.8rem
+			h3
+				font-size: 2.4rem
+				color: $white
+		&:first-child &__title
+			padding: 0
+		&:first-child &__body
+			p
+				padding: 3rem 0
+		&:last-child &__title
+			padding-left: 1rem
+		.more-btn
+			color: #d1d1d1
+			&:hover
+				color: $main1
+.body-section
+	padding: 2.2rem 0
+	&:first-child
+		border-bottom: 1px solid #252525
+	&:last-child
+		border-top: 1px solid #252525
+	&:hover .main-info
+		color: $main1
+	&:hover .secondary-info
+		color: $white
+a.body-section-content
+	display: block	
+.main-info
+	font-family: $Montserrat
+	font-size: 1.4rem
+	color: $headers
+.secondary-info
+	font-family: $Montserrat
+	font-size: 1.2rem
+	color: #363636
+.recent-posts
+	padding-bottom: .5rem
+.twitter-posts
+	padding-top: 0.5rem
+a.twitter-id, a.twitter-hashtag
+	color: #00bff3
+a.twitter-link
+	color: #959595
+.dribble-widget-grid
+	display: flex
+	flex-wrap: wrap
+.dribble-widget-block
+	flex-basis: 50%
+	height: 10rem
+	padding: 1rem
+	overflow: hidden
+
+//FOOTER
+.footer
+	padding: 4.5rem 0
+	background: #111
+	font-family: $Montserrat
+	font-size: 1.3rem
+	color: $headers
+	&__content
+		display: flex
+	&__side
+		display: flex
+		flex-basis: 50%
+		&:last-child
+			justify-content: flex-end
+	&__block
+		padding: 0 1rem
+		border-right: 1px solid #252525
+		&:last-child
+			border: none
+		span
+			color: #959595
+		a:hover
+			color: $main1
+
+
+@import "media"

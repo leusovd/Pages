@@ -1,0 +1,219 @@
+@media (max-width: 480px)
+	html
+		font-size: 8px
+	
+	.hdr
+		.main-logo
+			display: flex
+			justify-content: center
+			a
+				h2
+					display: none
+		&__nav
+			display: none
+			position: absolute
+			top: -11rem
+			right: 0
+			z-index: 999
+			width: 40%			
+			text-align: center
+			flex-direction: column
+			align-items: center
+			background: $white
+			color: #000
+			&--categories
+				position: relative
+				display: flex
+				flex-direction: column
+				a
+					padding: 1rem 0
+					font-size: 2rem
+					text-transform: uppercase
+			&--search
+				a
+					padding: 0
+					color: #000
+					font-size: 2rem
+					&:first-of-type
+						display: none
+			&-menu
+				display: block
+			&--active
+				display: flex
+		&__adaptive-search
+			display: block
+	.get-started
+		padding-top: 12rem
+		p:first-of-type
+			display: none
+
+
+	.portfolio__grid__block
+		width: 100%
+
+	.advantages
+		&__widgets
+			&__container
+				flex-wrap: wrap
+				padding-bottom: 3rem
+				justify-content: center
+			&__block
+				width: 50%
+				padding-bottom: 3rem
+
+	.blog
+		&__carousel
+			&__block
+				flex: 0 0 100%
+			&__prev, &__next
+				i
+					transform: translateX(0) translateY(0)
+
+	.logos
+		&__container
+			padding: 3rem 0
+			flex-wrap: wrap
+		&__block
+			flex-basis: 100%
+			img
+				width: 50%
+
+	.pre-footer
+		&__content
+			flex-wrap: wrap
+		&__block
+			flex-basis: 100%
+	.dribble-widget-block
+		padding: 1rem 0.5rem
+
+@media (min-width: 481px) and (max-width: 768px)
+	html
+		font-size: 9px
+	.hdr
+		&__nav
+			padding-top: 1rem
+			align-items: flex-start
+			&--categories
+				a
+					padding-right: 1rem
+			&--search
+				a
+					padding-left: 1rem
+					padding-bottom: 1rem
+		&__adaptive-search
+			display: none
+	.get-started
+		padding-top: 7rem
+		p:first-of-type
+			display: none
+
+	.portfolio__grid__block
+		width: 50%
+	
+	.advantages
+		&__widgets
+			&__container
+				flex-wrap: wrap
+				padding-bottom: 3rem
+				justify-content: center
+			&__block
+				width: 33.33%
+				padding-bottom: 3rem
+
+	.blog
+		&__carousel
+			&__block
+				flex: 0 0 100%
+	
+	.logos
+		&__container
+			padding: 3rem 0
+			flex-wrap: wrap
+		&__block
+			flex-basis: 50%
+	
+	.pre-footer
+		&__content
+			flex-wrap: wrap
+		&__block
+			flex-basis: 50%
+
+@media (min-width: 768px) and (max-width: 992px)
+	.hdr
+		&__nav
+			&--categories
+				a
+					padding-right: 1.5rem
+			&--search
+				a
+					padding-left: 1.5rem
+	.get-started
+		padding-top: 7rem
+		p:first-of-type
+			display: none	
+	
+	.portfolio__grid__block
+		width: 50%
+
+	.blog
+		&__carousel
+			&__block
+				flex: 0 0 50%
+
+	.logos
+		&__container
+			padding: 3rem 0
+		&__block
+			img
+				width: 125%
+
+	.pre-footer
+		&__content
+			flex-wrap: wrap
+		&__block
+			flex-basis: 50%
+
+
+@media (max-width: 992px)
+	.purchase
+		text-align: center
+		&__content
+			flex-direction: column
+		&__info
+			padding-left: 0
+		&__cta
+			padding: 1.5rem 0 0
+	.examples
+		height: auto
+		&__center
+			position: static
+			vertical-align: bottom
+		&__right
+			display: none
+		&__left
+			display: none
+
+	.video
+		display: none
+
+	.advantages
+		&__background
+			justify-content: center
+			background: none
+		&__content
+			padding: 0 0 5rem
+			&__list
+				padding-left: 0
+				&>li
+					align-items: flex-start
+
+	.footer
+		&__content
+			flex-wrap: wrap
+		&__side
+			flex-basis: 100%
+			justify-content: center
+			&:last-child
+				justify-content: center
+		
+					
