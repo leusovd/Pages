@@ -1,0 +1,29 @@
+@import 'sass/abstracts/abstracts-all.sass'
+
+.nav
+	display: flex
+	a
+		display: block
+		margin-right: 31px
+		color: inherit
+		letter-spacing: -.5px
+		&:hover
+			transition: .1s ease-out
+	a:last-child
+		margin-right: 0
+	&--header
+		color: $text-primary1
+		a:hover
+			color: transparentize($text-primary1, 0.3)
+	&--footer
+		justify-content: flex-end
+		color: $text-primary2
+		a:hover
+			color: darken($text-primary2, 10%)
+	&--adaptive
+		flex-direction: column
+		color: $text-primary1
+		a
+			margin-top: 30px
+		a:hover
+			color: transparentize($text-primary1, 0.3)

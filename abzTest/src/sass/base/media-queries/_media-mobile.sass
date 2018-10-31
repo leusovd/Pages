@@ -1,0 +1,178 @@
+h1 
+		font-size: 30px
+		line-height: 34px
+h2
+	font-size: 26px
+	line-height: 30px
+h3 
+	font-size: 22px
+h5
+	font-size: 16px
+
+.container
+	max-width: 606px
+.row
+	flex-direction: column
+.section__heading
+	padding-bottom: 29px
+.wrap--header
+	width: 100%
+.adaptive-menu__navigation
+	width: 80%
+
+//section-header
+.header
+	.row
+		flex-direction: row
+	&__logo
+		width: 50%
+	&__navigation
+		display: none
+	&__user-block
+		display: none
+	&__sandwich-menu
+		display: block
+
+//section-banner
+.section--banner
+	padding: 121px 0 70px
+	&__preview
+		align-items: center
+		width: 100%
+		padding: 0
+		text-align: center
+		p
+			margin-top: 10px
+		span
+			display: none
+		.btn
+			margin-top: 29px
+
+//section-about
+.section--about
+	padding-top: 40px
+	.row
+		align-items: center
+	&__img
+		width: 100%
+	.img--man-mobile
+		width: 219px
+		height: 216px
+	&__content
+		width: 100%
+		padding: 30px 0 0
+		text-align: center
+		.wrap--btn
+			justify-content: center
+
+//section-relationships
+.section--relationships
+	padding: 63px 0 50px
+	.wrap--header
+		width: 100%
+	&__widget
+		align-items: center
+		width: 100%		
+		margin-bottom: 20px
+		text-align: center
+		h3
+			margin-top: 10px
+
+//section-requirements
+.section--requirements
+	padding: 66px 0 58px
+	&__img
+		width: 100%
+		padding-bottom: 30px
+		.img--man-laptop
+			width: 256px
+			height: 216px
+	&__content
+		order: 1
+		width: 100%
+
+//section--users
+.section--users
+	padding-top: 70px
+	.post-header
+		align-self: center
+		width: 55%
+		margin: 10px auto
+.user-profile
+	flex-direction: column
+	align-items: center
+	width: 100%
+	padding: 0
+	&__info
+		width: 100%
+		padding: 10px 0 0
+		text-align: center
+		h4
+			width: 65%
+			margin: 0 auto
+
+//section-registration
+.section--registration
+	padding: 70px 0
+	&__form-block
+		padding: 0
+form.reg-form
+	flex-direction: column
+	margin-bottom: 0
+	fieldset
+		width: 100%
+		margin: 0 0 35px
+.wrap--form
+	flex-direction: column
+.position-select, .upload-photo
+	width: 100%
+.position-select
+	margin-right: 0
+	margin-bottom: 35px
+.upload-photo__button
+	button:first-child
+		display: none
+	button.btn--adaptive
+		display: flex
+
+//section-footer
+.footer
+	padding: 0 0 26px
+	.container
+		padding: 0
+	.wrap--nav
+		flex-direction: column
+		padding: 30px 0
+	&__logo, &__navigation
+		display: flex
+		justify-content: center
+		width: 100%
+	&__logo
+		padding-bottom: 6px
+	.nav--footer
+		flex-direction: column
+		align-items: center
+		justify-content: flex-start
+		text-align: center
+		a
+			margin: 14px 0 0
+	&__contents
+		flex-direction: column
+	&__contacts
+		display: flex
+		flex-direction: column
+		align-items: center
+		width: 100%
+		.icon
+			display: none
+		.company-product-info
+			display: none
+	&__links
+		display: flex
+		flex-direction: column
+		align-items: center
+		width: 100%
+		.company-product-info
+			display: block
+	.company-services
+		display: none

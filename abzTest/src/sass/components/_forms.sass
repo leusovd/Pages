@@ -1,0 +1,65 @@
+@import 'sass/abstracts/abstracts-all.sass'
+
+form.reg-form
+	display: flex
+	width: 100%
+	margin-bottom: 40px
+	font-family: $ssp-font
+	fieldset
+		display: flex
+		width: 33.33%
+		height: 60px
+		padding: 10px 15px 0
+		margin: 0 0 0 30px
+		border: 1px solid $input-border
+		border-radius: 4px
+		&:first-child
+			margin-left: 0
+		legend
+			padding: 0 5px
+			font-size: 12px
+			color: $input-labels
+
+.section--registration__form-block
+	input
+		width: 100%
+		border: none
+		font-size: 16px
+		&:focus
+			outline: none
+		&:placeholder
+			color: $input-labels
+
+.position-select, .upload-photo
+	width: 50%
+
+.position-select__field, .upload-photo__field
+	display: flex
+	align-items: center
+	height: 55px
+	padding: 15px
+	border: 1px solid $input-border
+	border-radius: 4px
+
+.position-select
+	margin-right: 30px
+	&__field
+		justify-content: space-between
+		font-size: 16px
+		cursor: pointer
+
+.upload-photo
+	position: relative
+	display: flex
+	&__field
+		flex-grow: 1
+		border-right: none
+		border-top-right-radius: 0
+		border-bottom-right-radius: 0
+		input
+			width: 100%
+	&__service-text
+		position: absolute
+		bottom: -18px
+		left: 17px
+

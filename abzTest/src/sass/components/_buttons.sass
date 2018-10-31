@@ -1,0 +1,63 @@
+@import 'sass/abstracts/abstracts-all.sass'
+
+.btn
+	height: 40px
+	width: 291px
+	padding: 0 0 3px
+	border: 0
+	border-radius: 4px
+	background: transparent
+	font-family: $ssp-font
+	font-size: 20px
+	font-weight: bold
+	cursor: pointer
+	&:hover
+		transition: .1s ease-out
+	&--primary
+		background: $btn-primary-bg
+		color: $btn-primary-txt
+		&:hover
+			background: $btn-primary-hover
+	&--secondary
+		border: 2px solid $btn-secondary-border
+		background: $btn-secondary-bg
+		color: $btn-secondary-txt
+		&--upload
+			height: 100%
+			width: 130px
+			border: 2px solid $btn-secondary-border
+			border-top-left-radius: 0
+			border-bottom-left-radius: 0
+			background: $btn-secondary-bg
+			color: $btn-secondary-txt
+			&:hover
+				background: $btn-secondary-hover
+		&:hover
+			background: $btn-secondary-hover
+	&--disabled
+		background: $btn-disabled-bg
+		color: $btn-disabled-txt
+	&--text
+		width: auto
+		padding: 0
+		color: $btn-text-txt
+		&:hover
+			color: $btn-text-hover
+
+a.btn
+	display: flex
+	align-items: center
+	justify-content: center
+
+button.sandwich-menu-icon
+	width: 23px
+	height: 23px
+	border: 0
+	background: url(images/icons/line-menu.svg) center/contain no-repeat
+	cursor: pointer
+button.btn--adaptive
+	align-items: center
+	justify-content: center
+	display: none
+	width: 56px
+

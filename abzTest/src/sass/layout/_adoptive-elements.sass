@@ -1,0 +1,47 @@
+@import 'sass/abstracts/abstracts-all.sass'
+
+//mobile and tablet navigation menu
+.adaptive-menu
+	position: fixed
+	top: 0
+	left: 0
+	display: none
+	max-width: 100vw
+	width: 100%
+	height: 100%
+	background: rgba(0, 0, 0, 0)
+	z-index: -1
+	cursor: pointer
+	transition: .3s ease-out
+	&.active
+		display: flex
+		background: rgba(0, 0, 0, 0.6)
+		z-index: 3
+	&__navigation
+		position: absolute
+		top: 0
+		left: 0
+		width: 34%
+		height: 100%
+		background: #fff
+		cursor: default
+	&__user
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		padding: 30px 25px 25px
+		border-bottom: 1px solid transparentize($text-secondary2, 0.5)
+	&__nav
+		padding-left: 24px
+	.current-user__photo
+		padding: 0 0 15px
+	.current-user__info
+		align-items: flex-start
+	.current-user__user-name
+		font-size: 20px
+	.current-user__user-email
+		font-size: 13px
+		margin-top: 6px
+
+.no-scroll
+	overflow: hidden
