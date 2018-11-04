@@ -1,2 +1,2 @@
-# Pages-Sass-Bootstrap
+# Pages
 Some of my HTML-coding
